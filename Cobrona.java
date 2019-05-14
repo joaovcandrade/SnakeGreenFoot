@@ -1,19 +1,18 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+// WARNING: This file is auto-generated and any changes to it will be overwritten
+import lang.stride.*;
+import java.util.*;
+import greenfoot.*;
 
 /**
- * Write a description of class Cobrona here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 public class Cobrona extends Actor
 {
+
     /**
-     * Act - do whatever the Cobrona wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the Cobrona wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
-        // Add your action code here.
-    }    
+    }
 }
