@@ -1,10 +1,10 @@
 #Greenfoot project file
 class.Cobrona.image=snake.png
-class.Deserto.image=paper.jpg
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=275
-editor.fx.0.y=-4
+class.Deserto.image=corkboard.jpg
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 height=585
 package.numDependencies=0
 package.numTargets=2
@@ -38,5 +38,5 @@ target2.x=0
 target2.y=0
 version=3.0.0
 width=825
-xPosition=314
-yPosition=109
+xPosition=170
+yPosition=132
