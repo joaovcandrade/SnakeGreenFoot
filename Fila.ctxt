@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Fila
+comment1.params=
+comment1.target=Fila()
+comment2.params=c
+comment2.target=void\ enfileirar(java.lang.Object)
+comment3.params=
+comment3.target=int\ getSize()
+comment4.params=
+comment4.target=java.lang.Object\ getPrimeiro()
+comment5.params=
+comment5.target=java.lang.Object\ getUltimo()
+numComments=6
