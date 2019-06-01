@@ -14,6 +14,6 @@ public class worldSnake extends World
         
         //Coloca a cabra
         fila = new Fila();        
-        addObject(new Cobrona(), 10, 10);
+        addObject(new Cobra(), 10, 10);
     }    
 }
