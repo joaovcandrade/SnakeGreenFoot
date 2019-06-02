@@ -15,5 +15,18 @@ public class worldSnake extends World
         //Coloca a cabra
         fila = new Fila();        
         addObject(new Cobra(true), 10, 10); //adiciona cabeça
-    }    
+        addComida();
+    }
+    
+    public void addCorpo(int x, int y){ //x e y posicao cabeca
+        Corpo c = new Corpo();
+        fila.enfileirar(c);
+        addObject(c, x, y);
+    }
+    
+    public void addComida(){
+        int x = Greenfoot.getRandomNumber(getWidth());
+        int y = Greenfoot.getRandomNumber(getHeight());
+        addObject(new Comida(), x , y);
+    }
 }
