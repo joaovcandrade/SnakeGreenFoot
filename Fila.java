@@ -1,20 +1,20 @@
-public class Fila<T>
+public class Fila 
 {
-    private T primeiro;
-    private T ultimo;    
+    private Corpo primeiro;
+    private Corpo ultimo;    
     private int size;
 
     public Fila(){
         this.size = 0;
     }
     
-    public void enfileirar(T c)
+    public void enfileirar(Corpo c)
     {
         if(size == 0){
             primeiro = c;
             ultimo = c;
         }else{
-            //ultimo.setProximo(c);
+            ultimo.setProximo(c);
             ultimo = c;
         }
         size ++;
@@ -24,11 +24,11 @@ public class Fila<T>
         return this.size;
     }
     
-    public T getPrimeiro(){
+    public Corpo getPrimeiro(){
         return this.primeiro;
     }
     
-    public T getUltimo(){
+    public Corpo getUltimo(){
         return this.ultimo;
     }
 }

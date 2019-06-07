@@ -5,10 +5,14 @@ import greenfoot.*;
 
 public class Cabeca extends Cobra
 {
+    private double speedDelay;
+    private double speed;
     private boolean comeu;
     public Cabeca(){
         super(true);
         this.comeu = false;
+        this.speed = 10;  
+        this.speedDelay = 1;
     }
     
     public void act()
@@ -16,7 +20,7 @@ public class Cabeca extends Cobra
         moveSnake(); //move a cobra   
         if(isTouching(Comida.class)){ //caso toque na comida
             removeTouching(Comida.class);  //remove comida  pra n ficar cirando comidas em loop          
-            worldSnake world = (worldSnake)getWorld();            
+            WorldSnake world = (WorldSnake)getWorld();            
             world.addComida(); 
             comeu = true; 
         }     
@@ -40,7 +44,20 @@ public class Cabeca extends Cobra
     //executa o if SPEED vezes, dando um atraso na movimentação da cobra, senao ela corre
     // loucamente.
     public void speedDelay(){ //
-        move(1);
-        //Implementar Delay
+        if(speed < 0){
+            speed = 10;
+            WorldSnake world = (WorldSnake)getWorld(); 
+            int x = getX();
+            int y = getY();
+             //implementar movecobra
+            if (comeu == true){
+                world.addCorpo(x, y);
+                speedDelay += 0.05;
+                comeu = false;
+            }
+            move(1);            
+        }else{
+            speed -= speedDelay;
+        }
     }
 }

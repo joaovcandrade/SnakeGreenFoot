@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class worldSnake extends World
+public class WorldSnake extends World
 {    
     Fila fila;
     
-    public worldSnake()
+    public WorldSnake()
     {    
         //Malha de fundo 
         super(30, 30, 20); 
