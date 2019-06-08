@@ -8,11 +8,11 @@ public class WorldSnake extends World
     {    
         //Malha de fundo 
         super(30, 30, 20); 
-        GreenfootImage img = new GreenfootImage(20,20);
-        img.drawRect(0,0,20,20);
+        GreenfootImage img = new GreenfootImage("Fundo.png");
+        //img.drawRect(0,0,20,20);   
         setBackground(img);
         
-        //Coloca a cabra
+        //Coloca a cobra
         fila = new Fila();        
         addObject(new Cabeca(), 10, 10); //adiciona cabeça
         addComida();

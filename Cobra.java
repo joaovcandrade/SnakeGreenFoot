@@ -5,9 +5,11 @@ public class Cobra extends Actor
 {
     public Cobra(boolean cabeca) 
     {
-        GreenfootImage img = new GreenfootImage(20,20);
-        img.setColor((cabeca)? Color.YELLOW : Color.BLACK); //escolhe a cor
-        img.fill(); //preenche o quadrado de preto
-        setImage(img); //troca a cobra pela imagem
+        GreenfootImage cabecinha = new GreenfootImage("Cabeca.png"); //inicializa cabeça da cobra
+        GreenfootImage corpo = new GreenfootImage("Corpo.png"); //inicializa corpo da cobra
+        
+        //seta imagem de acordo com a necessidade
+        if(cabeca)setImage(cabecinha);
+        else setImage(corpo);
     }
 }
