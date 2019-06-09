@@ -6,7 +6,7 @@ public class WorldSnake extends World{
     
     public WorldSnake(){    
         //Malha de fundo 
-        super(20, 20, 20); 
+        super(20, 20, 30); 
         GreenfootImage img = new GreenfootImage("Fundo.png");
         //img.drawRect(0,0,20,20);   
         setBackground(img);
@@ -48,17 +48,21 @@ public class WorldSnake extends World{
         addObject(new Comida(), x, y);
     }
     
-    public void moveCobra(int x, int y){ 
+    public void moveCobra(int x, int y, int rotation){ 
         int xAux = x;
         int yAux = y;
+        int rotAux = rotation;
         Corpo c = fila.getPrimeiro();
         for(int i = 0; i < fila.getSize(); i++){
             xAux = c.getX();
             yAux = c.getY();
+            rotAux = c.getRotation();
+            c.setRotation(rotation);
             c.setPosition(x, y);
             c = c.getProximo();
             x = xAux;
             y = yAux;
+            rotation = rotAux;
         }
     }
 }

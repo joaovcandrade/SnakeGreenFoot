@@ -11,7 +11,7 @@ public class Comida extends Actor
 {    
     public Comida(){
         GreenfootImage comida = new GreenfootImage("images/maca.png");
-        comida.scale(20,20);       
+        comida.scale(30,30);       
         setImage(comida); 
     }
 }
