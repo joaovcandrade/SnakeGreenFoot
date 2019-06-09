@@ -1,5 +1,4 @@
-public class Fila 
-{
+public class Fila{ 
     private Corpo primeiro;
     private Corpo ultimo;    
     private int size;
@@ -8,8 +7,7 @@ public class Fila
         this.size = 0;
     }
     
-    public void enfileirar(Corpo c)
-    {
+    public void enfileirar(Corpo c){
         if(size == 0){
             primeiro = c;
             ultimo = c;
