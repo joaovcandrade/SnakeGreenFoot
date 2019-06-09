@@ -10,7 +10,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Comida extends Actor
 {    
     public Comida(){
-        GreenfootImage comida = new GreenfootImage("images/maca.png");       
-        setImage("images/maca.png"); 
+        GreenfootImage comida = new GreenfootImage("images/maca.png");
+        comida.scale(20,20);       
+        setImage(comida); 
     }
 }

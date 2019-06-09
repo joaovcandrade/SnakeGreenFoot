@@ -37,7 +37,7 @@ public class Cabeca extends Cobra
     
     public void morreu(){
         WorldSnake world = (WorldSnake) getWorld();
-        world.resetGame();
+        world.reset();
     }
     
     //Movimenta a cobra de acordo com os botoes

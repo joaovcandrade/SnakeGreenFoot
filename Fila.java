@@ -18,6 +18,11 @@ public class Fila{
         size ++;
     }
     
+    public void desenfileirar(){
+        primeiro = primeiro.getProximo();
+        size --;
+    }
+    
     public int getSize(){
         return this.size;
     }
@@ -28,5 +33,9 @@ public class Fila{
     
     public Corpo getUltimo(){
         return this.ultimo;
+    }
+    
+    public boolean vazio(){
+        return (size > 0)?  false : true;
     }
 }

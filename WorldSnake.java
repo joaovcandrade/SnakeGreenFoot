@@ -6,32 +6,31 @@ public class WorldSnake extends World{
     
     public WorldSnake(){    
         //Malha de fundo 
-        super(30, 30, 20); 
+        super(20, 20, 20); 
         GreenfootImage img = new GreenfootImage("Fundo.png");
         //img.drawRect(0,0,20,20);   
         setBackground(img);
         
         //Coloca a cobra
         fila = new Fila();  
+        start();
+    }
+    
+    public void start(){
         addObject(new Cabeca(), 10, 10); //adiciona cabeça
         addCorpo(9, 10);
         addCorpo(8, 10);
         addComida();
     }
     
-    public void resetGame(){
-        fila = new Fila();
-        Cabeca cabeca = getObjects(Cabeca.class).get(0);
-        removeObject(cabeca);
-        
-        List<Corpo> corpos = getObjects(Corpo.class);
-        for(Corpo c : corpos){
-            removeObject(c);
-        }
-        
-        addObject(new Cabeca(), 10, 10); //adiciona cabeça
-        addCorpo(9, 10);
-        addCorpo(8, 10);
+    public void reset(){
+        addObject(new GameOver(), getWidth()/2 , getHeight()/2);
+        //List objects = getObjects(null);
+        //removeObjects(objects); //remove todos os objetos do mundo
+        //for(int i = 0; !fila.vazio(); i++){ //desenfilera
+         //   fila.desenfileirar();
+        //}        
+        //start();
     }
     
     public void addCorpo(int x, int y){ //x e y posicao cabeca
@@ -41,8 +40,11 @@ public class WorldSnake extends World{
     }
     
     public void addComida(){
-        int x = Greenfoot.getRandomNumber(getWidth());
-        int y = Greenfoot.getRandomNumber(getHeight());
+        int x, y;
+        do{
+             x = Greenfoot.getRandomNumber(getWidth());
+             y = Greenfoot.getRandomNumber(getHeight());
+        }while(getObjectsAt(x, y, null).size() > 0); //verifica se ha algum ator nesta posiçao.
         addObject(new Comida(), x, y);
     }
     
