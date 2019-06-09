@@ -13,9 +13,9 @@
         
         public Cabeca(){
         super(true);   
-        strikeAberto = new GreenfootImage("images/sprite_0.png");
+        strikeAberto = new GreenfootImage("images/Snake/Open1.png");
         strikeAberto.scale(30,30);
-        strikeFechado = new GreenfootImage("images/sprite_1.png");
+        strikeFechado = new GreenfootImage("images/Snake/Close1.png");
         strikeFechado.scale(30,30);
         this.comeu = false;
         this.speed = 10;  

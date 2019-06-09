@@ -7,8 +7,8 @@ public class WorldSnake extends World{
     public WorldSnake(){    
         //Malha de fundo 
         super(20, 20, 30); 
-        GreenfootImage img = new GreenfootImage("Fundo.png");
-        //img.drawRect(0,0,20,20);   
+        GreenfootImage img = new GreenfootImage("images/Background/b1.png");
+        img.scale(60,60);   
         setBackground(img);
         
         //Coloca a cobra
