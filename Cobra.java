@@ -5,8 +5,8 @@ public class Cobra extends Actor
 {
     public Cobra(boolean cabeca) 
     {
-        GreenfootImage cabecinha = new GreenfootImage("Cabeca.png"); //inicializa cabeça da cobra
-        GreenfootImage corpo = new GreenfootImage("Corpo.png"); //inicializa corpo da cobra
+        GreenfootImage cabecinha = new GreenfootImage("images/cabeca.png"); //inicializa cabeça da cobra
+        GreenfootImage corpo = new GreenfootImage("images/corpo.png"); //inicializa corpo da cobra
         
         //seta imagem de acordo com a necessidade
         if(cabeca)setImage(cabecinha);
