@@ -4,8 +4,8 @@ public class Corpo extends Cobra
 {
     Corpo proximo;
     
-    public Corpo(){
-        super(false);
+    public Corpo(int cor){
+        super(false, cor);
     }
     
     public void setPosition(int x, int y){

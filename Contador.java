@@ -9,27 +9,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Contador extends Actor
 {
     private int pontos;
-    private String prefixo = "Pontos: ";
     
     public Contador(){
         this.pontos = -1;
     }
     
-    public void act() 
-    {
-        // Add your action code here.
-    }
-    
     public void aumentarPontos(){
         pontos++;
-        updateImage();
+        updateText();
+        setImage(new GreenfootImage(1,1));
     }
-    public void updateImage()
-    {
-        GreenfootImage text = new GreenfootImage(prefixo + pontos,
-                                                 30, Color.BLACK,
-                                                 new Color(0,0,0,0));
-        
-        setImage(text);
-    }    
+    
+    public void updateText()
+    {         
+        this.getWorld().showText("Pontos: " + pontos, 1, 0);        
+    }   
+    
+    public void setPontos(int pontos){
+        this.pontos = pontos;
+    }
 }
