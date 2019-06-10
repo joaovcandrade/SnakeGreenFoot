@@ -9,6 +9,7 @@
         private double speedDelay;
         private double speed;
         private boolean comeu;
+        private boolean movimento;
         private GreenfootImage strikeAberto, strikeFechado;
         
         public Cabeca(){
@@ -50,19 +51,23 @@
     public void moveSnake(){
         haComida();
         if(Greenfoot.isKeyDown("left")){
-            if(getRotation() != 0){
+            if(getRotation() != 0 && !movimento){
+                movimento = true;
                 setRotation(180);
             }
         } else if(Greenfoot.isKeyDown("right")){
-            if(getRotation() != 180){
+            if(getRotation() != 180 && !movimento){
+                movimento = true;
                 setRotation(0);            
             }
         } else if(Greenfoot.isKeyDown("down")){
-            if(getRotation() != 270){
+            if(getRotation() != 270 && !movimento){
+                movimento = true;
                 setRotation(90);            
             }
         } else if(Greenfoot.isKeyDown("up")){
-            if(getRotation() != 90){
+            if(getRotation() != 90 && !movimento){
+                movimento = true;
                 setRotation(270);            
             }
         }        
@@ -84,6 +89,7 @@
                 comeu = false;                
             }            
             move(1);
+            movimento = false;
         }else{            
             speed -= speedDelay;
         }

@@ -3,6 +3,7 @@ import java.util.List;
 
 public class WorldSnake extends World{    
     Fila fila;
+    private Contador contador;
     
     public WorldSnake(){    
         //Malha de fundo 
@@ -10,7 +11,7 @@ public class WorldSnake extends World{
         GreenfootImage img = new GreenfootImage("images/Background/b1.png");
         img.scale(60,60);   
         setBackground(img);
-        
+        this.contador = new Contador();
         //Coloca a cobra
         fila = new Fila();  
         start();
@@ -18,6 +19,7 @@ public class WorldSnake extends World{
     
     public void start(){
         addObject(new Cabeca(), 10, 10); //adiciona cabeça
+        addObject(contador, 2, 0);
         addCorpo(9, 10);
         addCorpo(8, 10);
         addComida();
@@ -46,6 +48,7 @@ public class WorldSnake extends World{
              y = Greenfoot.getRandomNumber(getHeight());
         }while(getObjectsAt(x, y, null).size() > 0); //verifica se ha algum ator nesta posiçao.
         addObject(new Comida(), x, y);
+        contador.aumentarPontos();
     }
     
     public void moveCobra(int x, int y, int rotation){ 
